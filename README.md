@@ -4,9 +4,9 @@ StaticHTMLTestSite
 A static sample HTML site for WebDriver testing.
 
 
-GitHub Site
+GitHub Site URL
 ==================
-http://djangofan.github.com/StaticHTMLTestSite
+TODO
 
 
 Author
