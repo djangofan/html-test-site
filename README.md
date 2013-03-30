@@ -15,6 +15,6 @@ GitHub Site URL
 TODO
 
 
-Author
+Originally forked from this project:
 ==================
 https://github.com/pojorisin
