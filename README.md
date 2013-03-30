@@ -7,7 +7,7 @@ will need to hit the exact URL:  [http://localhost:8001/index.html](http://local
 Get up and running with three steps:
 <ol>
 <li>Download the .zip distribution of this archive. Unzip it anywhere.</li>
-<li>Run with Gradle task set "clean copyToLib wrapper compileJava".  There is also a<br/>
+<li>Run with Gradle tasks "clean copyToLib compileJava".  There is also a<br/>
    'startWeb' Gradle task if  you choose to use it but it isn't really necessary.</li>
 <li>Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)</li>
 </ol>
