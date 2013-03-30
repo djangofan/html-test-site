@@ -12,7 +12,7 @@ Get up and running with two steps:
 
 GitHub Site URL
 ==================
-TODO
+http://djangofan.github.com/html-test-site
 
 
 Originally forked from this project:
