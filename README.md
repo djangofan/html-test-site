@@ -9,7 +9,7 @@ Get up and running with three steps:
 <li>Download the .zip distribution of this archive. Unzip it anywhere.</li>
 <li>Run with Gradle task set "clean copyToLib wrapper compileJava".  There is also a<br/>
    'startWeb' Gradle task if  you choose to use it but it isn't really necessary.</li>
-<li>Run the included 'startWeb.bat' directly.</li>
+<li>Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)</li>
 </ol>
 
 
