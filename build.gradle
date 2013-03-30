@@ -1,7 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'application'
 apply plugin: 'idea'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.5'
+    jarFile = 'lib/wrapper.jar'
+    // rename the unix wrapper script?
+}
 
 // This project will work with the --offline arg if you don't have internet access.
 // The initial run (of course) requires internet to download the libs.
@@ -31,20 +36,4 @@ task( startWeb, dependsOn: 'classes', type: Exec ) {
 }
 
 defaultTasks 'startWeb'
-
-mainClassName = 'webdriver.test.BasicHttpServer'
-
-task copySiteFiles(type: Copy) {
-    from 'site'
-    into 'build/site'
-    outputs.dir 'build/site'
-}
-
-applicationDistribution.from( copySiteFiles ) {
-    into 'site'
-}
-
-
-
-
 

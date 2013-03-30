@@ -6,8 +6,7 @@
     <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="js/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-      $(function()
-      {
+      $(function() {
         $("#jqueryDatepickerTestControlID").datepicker();
       })
       
@@ -102,8 +101,17 @@
 	     if ( windowName == "" || windowName == null || windowName=='undefined' ) { 
 	       windowName="Default"
 	     };
-        window.open("Window2.html",windowName);
+        window.open("w2.html",windowName);
       }
+	  
+	  function loadIFrame2() {
+		window.frames['BodyFrame2'].document.location.href = "iframe2.html";
+      }
+
+      function delayedLoad() {
+        window.setTimeout( loadIFrame2, 2000 );
+      }
+
 	  
     </script>
     <title>webdriver unit test page title</title
@@ -498,13 +506,30 @@
       <table width="800">
         <tr>
           <td>
-            <p id="iFrameTestDescriptionTextID" name="iFrameTestDescriptionTextName"><b>iFrame Test</b></p>
+            <p id="iFrame1TestDescriptionTextID" name="iFrame1TestDescriptionTextName"><b>iFrame1 Test </b></p>
           </td>
           <td>
             <table width="500">
               <tr>
                 <td>
-                  <iframe src="frame_redirect.html" frameborder="3" width="700" height="200"></iframe>
+                  <iframe id="BodyFrame1" name="BodyFrame1" src="frame_redirect.html" frameborder="1" width="700" height="200"></iframe>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+	  <hr />
+	  <table width="800">
+        <tr>
+          <td>
+            <p id="iFrame2TestDescriptionTextID" name="iFrame2TestDescriptionTextName"><b>iFrame2 Test</b></p>
+          </td>
+          <td>
+            <table width="500">
+              <tr>
+                <td>
+                  <iframe id="BodyFrame2" name="BodyFrame2" src="" onLoad="delayedLoad();" frameborder="1" width="700" height="200"></iframe>
                 </td>
               </tr>
             </table>
@@ -515,7 +540,8 @@
 	  <table width="800">
         <tr>
             <td>
-              <p id="openNewWindowsTestDescriptionTextID" name="openNewWindowsTestDescriptionTextName"><a href="w2.html" id="lnkNewWindow" target="_blank"><b>Open New Windows Test</b></a></p>
+              <p id="openNewWindowsTestDescriptionTextID" name="openNewWindowsTestDescriptionTextName"><a href="w2.html" id="lnkNewWindow" target="_blank"><b>Open New Windows Test</b></a></p><br/>If this link opens a new tab instead of a new window,<br/>
+			  you may wish to unset browser property for 'Open new<br/>windows in a new tab instead'.
             </td>
             <td>
               <table width="300">
