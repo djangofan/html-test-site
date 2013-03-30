@@ -1,0 +1,57 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+// This project will work with the --offline arg if you don't have internet access.
+// The initial run (of course) requires internet to download the libs.
+
+ext {
+    projTitle = 'html-test-site'
+    projVersion = '1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.2.2'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
+}
+	
+task show << {
+    println ""
+    println "-----------------------------------------------"
+    println "Project Name: " + projTitle
+    println "Version: " + projVersion
+    println "Home directory: "
+    println "Build output: " + relativePath(compileJava.destinationDir)
+    println "Resources output: " + relativePath(processResources.destinationDir)
+    println "Test output dir: " + relativePath(sourceSets.test.output.classesDir)
+    println "Test result dir: " + relativePath(testResultsDir)
+    println "Report dir: " + relativePath(testReportDir)
+    println "-----------------------------------------------"
+} 
+
+task(runWeb, dependsOn: 'classes', type: Exec) {
+    commandLine 'cmd.exe', '/c', 'START', 'startWeb.bat'
+}
+
+mainClassName = 'webdriver.test.BasicHttpServer'
+
+task copySiteFiles(type: Copy) {
+    from 'site'
+    into 'build/site'
+    outputs.dir 'build/site'
+}
+
+applicationDistribution.from( copySiteFiles ) {
+    into 'site'
+}
+
+
+
+
+
