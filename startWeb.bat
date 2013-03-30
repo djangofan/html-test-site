@@ -93,18 +93,9 @@ SET "BUILD_HOME=%SCRIPT_HOME%\build"
 IF NOT EXIST "%BUILD_HOME%\classes\main\webdriver\test\BasicHttpServer.class" (
   ECHO You need to compile BasicHttpServer.java before this will run.
   ECHO Expecting it at: ^"%BUILD_HOME%\classes\main\webdriver\test\BasicHttpServer.class^"
-  gradlew.bat copyToLib compileJava
+  gradlew.bat clean copyToLib wrapper compileJava
   ECHO Finished compiling.
   timeout 5
-)
-
-:::::::::::::::::::::::::::::::::::::::::::::::::
-:: Verify required http server libs are available
-:::::::::::::::::::::::::::::::::::::::::::::::::
-IF NOT EXIST "%SCRIPT_HOME%\lib" (
-  ECHO You need to run the ^"copyToLib^" task to create the lib directory.
-  ECHO Required to start web server.
-  GOTO :ERROR
 )
 
 :::::::::::::::::::::::::::::::::::::::::::::::

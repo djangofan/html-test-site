@@ -4,8 +4,7 @@ apply plugin: 'idea'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.5'
-    jarFile = 'lib/wrapper.jar'
-    // rename the unix wrapper script?
+    jarFile = 'gradle/wrapper.jar'
 }
 
 // This project will work with the --offline arg if you don't have internet access.
