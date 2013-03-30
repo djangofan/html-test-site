@@ -20,24 +20,17 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
 }
-	
-task show << {
-    println ""
-    println "-----------------------------------------------"
-    println "Project Name: " + projTitle
-    println "Version: " + projVersion
-    println "Home directory: "
-    println "Build output: " + relativePath(compileJava.destinationDir)
-    println "Resources output: " + relativePath(processResources.destinationDir)
-    println "Test output dir: " + relativePath(sourceSets.test.output.classesDir)
-    println "Test result dir: " + relativePath(testResultsDir)
-    println "Report dir: " + relativePath(testReportDir)
-    println "-----------------------------------------------"
-} 
 
-task(runWeb, dependsOn: 'classes', type: Exec) {
-    commandLine 'cmd.exe', '/c', 'START', 'startWeb.bat'
+task copyToLib(type: Copy) {
+    into "lib"
+    from configurations.runtime
 }
+
+task( startWeb, dependsOn: 'classes', type: Exec ) {
+    commandLine 'cmd.exe', '/c', 'START', 'startWeb.bat', 'site'
+}
+
+defaultTasks 'startWeb'
 
 mainClassName = 'webdriver.test.BasicHttpServer'
 

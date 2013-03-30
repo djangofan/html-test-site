@@ -68,8 +68,6 @@ import org.apache.http.protocol.ResponseContent;
 import org.apache.http.protocol.ResponseDate;
 import org.apache.http.protocol.ResponseServer;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Basic, yet fully functional and spec compliant, HTTP/1.1 file server.
@@ -81,15 +79,14 @@ import org.slf4j.LoggerFactory;
  */
 public class BasicHttpServer {
 	
-	public static Logger LOGGER = LoggerFactory.getLogger( "StaticLogger" );
-
     public static void main(String[] args) throws Exception {
-    	if (args.length < 1) {
-    		   LOGGER.error( "Please specify HTTP document root directory as a quoted argument." );
+    	if ( args.length < 1 ) {
+    		   System.err.println( "Please specify HTTP document root directory as " );
+			   System.err.println( "a argument relative to the run directory." );
 			   Thread.sleep(10);
     		   System.exit(1);
     	}
-        Thread t = new RequestListenerThread( 8080, args[0] );
+        Thread t = new RequestListenerThread( 8001, args[0] );
         t.setDaemon(false);
         t.start();
     }
@@ -101,6 +98,7 @@ public class BasicHttpServer {
         public HttpFileHandler(final String docRoot) {
             super();
             this.docRoot = docRoot;
+			System.out.println( "Registered http root:\n" + docRoot );
         }
 
         public void handle(
@@ -117,35 +115,35 @@ public class BasicHttpServer {
             if (request instanceof HttpEntityEnclosingRequest) {
                 HttpEntity entity = ((HttpEntityEnclosingRequest) request).getEntity();
                 byte[] entityContent = EntityUtils.toByteArray(entity);
-                LOGGER.info("Incoming entity content (bytes): " + entityContent.length);
+                System.out.println("Incoming entity content (bytes): " + entityContent.length);
             }
 
-            final File file = new File(this.docRoot, URLDecoder.decode(target, "UTF-8"));
+            final File file = new File( this.docRoot, URLDecoder.decode(target, "UTF-8") );
             if (!file.exists()) {
 
-                response.setStatusCode(HttpStatus.SC_NOT_FOUND);
+                response.setStatusCode( HttpStatus.SC_NOT_FOUND );
                 StringEntity entity = new StringEntity(
                         "<html><body><h1>File" + file.getPath() +
                         " not found</h1></body></html>",
                         ContentType.create("text/html", "UTF-8"));
                 response.setEntity(entity);
-                LOGGER.info("File " + file.getPath() + " not found");
+                System.out.println( "File " + file.getPath() + " not found" );
 
             } else if (!file.canRead() || file.isDirectory()) {
 
-                response.setStatusCode(HttpStatus.SC_FORBIDDEN);
+                response.setStatusCode( HttpStatus.SC_FORBIDDEN );
                 StringEntity entity = new StringEntity(
                         "<html><body><h1>Access denied</h1></body></html>",
                         ContentType.create("text/html", "UTF-8"));
                 response.setEntity(entity);
-                LOGGER.info("Cannot read file " + file.getPath());
+                System.out.println( "Cannot read file " + file.getPath() );
 
             } else {
 
-                response.setStatusCode(HttpStatus.SC_OK);
-                FileEntity body = new FileEntity(file, ContentType.create("text/html", (Charset) null));
+                response.setStatusCode( HttpStatus.SC_OK );
+                FileEntity body = new FileEntity( file, ContentType.create("text/html", (Charset) null) );
                 response.setEntity(body);
-                LOGGER.info("Serving file " + file.getPath());
+                System.out.println( "Serving file " + file.getPath() );
             }
         }
 
@@ -177,7 +175,7 @@ public class BasicHttpServer {
 
             // Set up request handlers
             HttpRequestHandlerRegistry reqistry = new HttpRequestHandlerRegistry();
-            reqistry.register("*", new HttpFileHandler(docroot));
+            reqistry.register( "*", new HttpFileHandler(docroot) );
 
             // Set up the HTTP service
             this.httpService = new HttpService(
@@ -190,13 +188,13 @@ public class BasicHttpServer {
 
         @Override
         public void run() {
-            LOGGER.info("Listening on port " + this.serversocket.getLocalPort());
-            while (!Thread.interrupted()) {
+            System.out.println("Listening on port " + this.serversocket.getLocalPort());
+            while ( !Thread.interrupted() ) {
                 try {
                     // Set up HTTP connection
                     Socket socket = this.serversocket.accept();
                     DefaultHttpServerConnection conn = new DefaultHttpServerConnection();
-                    LOGGER.info("Incoming connection from " + socket.getInetAddress());
+                    System.out.println("Incoming connection from " + socket.getInetAddress());
                     conn.bind(socket, this.params);
 
                     // Start worker thread
@@ -229,7 +227,7 @@ public class BasicHttpServer {
 
         @Override
         public void run() {
-            LOGGER.info("New connection thread");
+            System.out.println("New connection thread");
             HttpContext context = new BasicHttpContext(null);
             try {
                 while (!Thread.interrupted() && this.conn.isOpen()) {
