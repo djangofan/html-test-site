@@ -53,7 +53,7 @@ the gh-pages branch from GitHub then the site pages will disappear a few minutes
 To update the branch, these are the steps:
 
     CD C:\Temp\html-test-site
-    git checkout origin gh-pages
+    git checkout gh-pages
     Make edits
     git add .
     git commit -a -m "Initial gh-pages commit."
