@@ -15,7 +15,7 @@ Alternatively, you can get it up and running on your own local system with three
     4. Navigate to http://localhost:8001/index.html
 
 
-GitHub Site URL
+GitHub Page URL
 ==================
 http://djangofan.github.com/html-test-site
 
@@ -25,7 +25,7 @@ Originally forked from this project:
 https://github.com/pojorisin
 
 
-Instructions For Forking This Project
+Instructions On Forking This Project For Yourself
 ==================
 
 Steps to publishing a website on GitHub:
