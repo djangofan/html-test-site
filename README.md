@@ -4,7 +4,7 @@ StaticHTMLTestSite
 A static sample HTML site for WebDriver testing.  Site browsing is not enabled; you <br/>
 will need to hit the exact URL:
 
-    [http://localhost:8001/index.html](http://localhost:8001/index.html)
+[http://localhost:8001/index.html](http://localhost:8001/index.html)
 
 Get up and running with three steps:
 
