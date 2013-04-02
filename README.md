@@ -3,7 +3,7 @@ StaticHTMLTestSite
 
 A static sample HTML site for WebDriver testing.
 
-[http://djangofan.github.com/html-test-site/site/index.html]
+[http://djangofan.github.com/html-test-site/site/index.html](http://djangofan.github.com/html-test-site/index.html)
 
 
 Alternatively, you can get it up and running on your own local system with three steps:
