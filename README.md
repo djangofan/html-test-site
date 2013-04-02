@@ -1,4 +1,4 @@
-StaticHTMLTestSite
+html-test-site
 ==================
 
 A static sample HTML site for WebDriver testing.  Hosted on GitHub at this location:
