@@ -51,7 +51,7 @@ the gh-pages branch from GitHub then the site pages will disappear a few minutes
 
 To update the branch, these are the steps:
 
-CD C:\Temp\html-test-site
+    CD C:\Temp\html-test-site
     git checkout origin gh-pages
     Make edits
     git add .
