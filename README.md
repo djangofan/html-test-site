@@ -1,7 +1,7 @@
 StaticHTMLTestSite
 ==================
 
-A static sample HTML site for WebDriver testing.
+A static sample HTML site for WebDriver testing.  Hosted on GitHub at this location:
 
 [http://djangofan.github.com/html-test-site/site/index.html](http://djangofan.github.com/html-test-site/index.html)
 
