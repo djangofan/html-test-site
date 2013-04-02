@@ -6,9 +6,10 @@ will need to hit the exact URL:  [http://localhost:8001/index.html](http://local
 
 Get up and running with three steps:
 
-    Download the .zip distribution of this archive. Unzip it anywhere.
-    Run with Gradle tasks "clean copyToLib compileJava".  There is also a 'startWeb' Gradle task if you choose<br/> to use it but it isn't really necessary.
-    Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
+    1. Download the .zip distribution of this archive. Unzip it anywhere.
+    2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 'startWeb' Gradle task if you choose
+       to use it but it isn't really necessary.
+    3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
 
 
 GitHub Site URL
