@@ -110,14 +110,14 @@
       }
 
       function delayedLoad() {
-        window.setTimeout( loadIFrame2, 2000 );
+        window.setTimeout( loadIFrame2(), 2000 );
       }
 
 	  
     </script>
     <title>webdriver unit test page title</title
   </head>
-  <body>
+  <body onLoad="delayedLoad();">
     <form id="webDriverUnitTestFormID" name="webDriverUnitTestFormName">
       <h1>UI Automation Selenium WebDriver Unit Test Page</h1>
       <hr />
@@ -206,6 +206,76 @@
         </tr>
       </table>
       <hr />
+	  <table width="800">
+        <tr>
+          <td>
+            <p id="iFrame1TestDescriptionTextID" name="iFrame1TestDescriptionTextName"><b>Frame Test1</b></p>
+          </td>
+          <td>
+            <table width="450">
+              <tr>
+                <td>
+                  <iframe id="BodyFrame1" name="BodyFrame1" src="frame_redirect.html" frameborder="1" width="700" height="240"></iframe>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+	  <hr />
+	  <table width="800">
+        <tr>
+          <td>
+            <p id="iFrame2TestDescriptionTextID" name="iFrame2TestDescriptionTextName"><b>Frame Test2</b></p>
+          </td>
+          <td>
+            <table width="450">
+              <tr>
+                <td>
+                  <iframe id="BodyFrame2" name="BodyFrame2" src="" frameborder="1" width="700" height="240"></iframe>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+	  <hr />
+	  <table width="800">
+        <tr>
+          <td>
+            <p id="jqueryDatepickerTestDescriptionTextID" name="jqueryDatepickerTestDescriptionTextName"><b>JQuery datepicker Test</b></p>
+          </td>
+          <td>
+            <table width="300">
+              <tr>
+                <td>
+                  <p>Date: <input id="jqueryDatepickerTestControlID" name="jqueryDatepickerTestControlName" type="text"></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <hr />
+	  <table width="800">
+        <tr>
+            <td>
+              <p id="openNewWindowsTestDescriptionTextID" name="openNewWindowsTestDescriptionTextName"><a href="w2.html" id="lnkNewWindow" target="_blank"><b>Open Window Test</b></a></p>
+            </td>
+            <td>
+              <table width="300">
+                  <tr>
+                    <td>
+                        <input type="button" id="btnNewWindow" onclick="open_window('')" value="Open Window" />
+						<span id="output"></span><br/>
+						<br/>If this link or button opens a new tab instead of a new window, you may wish to unset browser property for 'Open new windows in a new tab instead'.
+                    </td>
+                  </tr>
+              </table>
+            </td>
+        </tr>
+      </table>
+	  <hr />
       <table width="800">
         <tr>
             <td>
@@ -487,77 +557,7 @@
         </tr>
       </table>
       <hr />
-      <table width="800">
-        <tr>
-          <td>
-            <p id="jqueryDatepickerTestDescriptionTextID" name="jqueryDatepickerTestDescriptionTextName"><b>JQuery datepicker Test</b></p>
-          </td>
-          <td>
-            <table width="300">
-              <tr>
-                <td>
-                  <p>Date: <input id="jqueryDatepickerTestControlID" name="jqueryDatepickerTestControlName" type="text"></p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-      <hr />
-      <table width="800">
-        <tr>
-          <td>
-            <p id="iFrame1TestDescriptionTextID" name="iFrame1TestDescriptionTextName"><b>iFrame1 Test </b></p>
-          </td>
-          <td>
-            <table width="500">
-              <tr>
-                <td>
-                  <iframe id="BodyFrame1" name="BodyFrame1" src="frame_redirect.html" frameborder="1" width="700" height="200"></iframe>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-	  <hr />
-	  <table width="800">
-        <tr>
-          <td>
-            <p id="iFrame2TestDescriptionTextID" name="iFrame2TestDescriptionTextName"><b>iFrame2 Test</b></p>
-          </td>
-          <td>
-            <table width="500">
-              <tr>
-                <td>
-                  <iframe id="BodyFrame2" name="BodyFrame2" src="" onLoad="delayedLoad();" frameborder="1" width="700" height="200"></iframe>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-	  <hr />
-	  <table width="800">
-        <tr>
-            <td>
-              <p id="openNewWindowsTestDescriptionTextID" name="openNewWindowsTestDescriptionTextName"><a href="w2.html" id="lnkNewWindow" target="_blank"><b>Open New Windows Test</b></a></p><br/>If this link opens a new tab instead of a new window,<br/>
-			  you may wish to unset browser property for 'Open new<br/>windows in a new tab instead'.
-            </td>
-            <td>
-              <table width="300">
-                  <tr>
-                    <td>
-                        <input type="button" id="btnNewNamelessWindow" onclick="open_window('')" value="Open Default Window" />
-                        <input type="button" id="btnNewNamedWindow" onclick="open_window('w2')" value="Open Named Window" /><br/>
-						<span id="output"></span>
-                    </td>
-                  </tr>
-              </table>
-            </td>
-        </tr>
-      </table>
-	  <hr />
+
 	  <br/>
     </form>
   </body>

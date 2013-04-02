@@ -6874,7 +6874,7 @@ function Datepicker() {
 		altFormat: "", // The date format to use for the alternate field
 		constrainInput: true, // The input is constrained by the current date format
 		showButtonPanel: false, // True to show button panel, false to not show it
-		autoSize: false, // True to size the input for the date format, false to leave as is
+		autoSize: true, // True to size the input for the date format, false to leave as is
 		disabled: false // The initial disabled state
 	};
 	$.extend(this._defaults, this.regional[""]);
