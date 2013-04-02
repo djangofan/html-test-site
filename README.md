@@ -28,7 +28,7 @@ https://github.com/pojorisin
 Instructions On Forking This Project For Yourself
 ==================
 
-Steps to publishing a website on GitHub:
+Steps to publishing a website on GitHub (each line is a separate step):
 
     Fork my project at GitHub: https://github.com/djangofan/html-test-site
     CD C:\Temp
@@ -36,8 +36,7 @@ Steps to publishing a website on GitHub:
     CD C:\Temp\html-test-site
     git checkout --orphan gh-pages
     git rm -rf .
-    cp -r C:\Eclipse\workspace\html-test-site\site C:\Temp\html-test-site\site
-    The Eclipse directory is a copy of the master branch on my local machine.
+    Copy updated site files into place, within C:\Temp\html-test-site\site
     git add .
     git commit -a -m "Initial gh-pages commit."
     git pull origin gh-pages
