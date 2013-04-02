@@ -5,10 +5,10 @@ A static sample HTML site for WebDriver testing.  Site browsing is not enabled; 
 will need to hit the exact URL:  [http://localhost:8001/index.html](http://localhost:8001/index.html)
 
 Get up and running with three steps:
-      1. Download the .zip distribution of this archive. Unzip it anywhere.</li>
-      2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a<br/>
+      Download the .zip distribution of this archive. Unzip it anywhere.</li>
+      Run with Gradle tasks "clean copyToLib compileJava".  There is also a<br/>
          'startWeb' Gradle task if  you choose to use it but it isn't really necessary.</li>
-      3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)</li>
+      Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)</li>
 
 
 GitHub Site URL
