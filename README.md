@@ -1,26 +1,23 @@
 StaticHTMLTestSite
 ==================
 
-A static sample HTML site for WebDriver testing.  Site browsing is not enabled; you <br/>
-will need to hit the exact URL:
+A static sample HTML site for WebDriver testing.
 
-[http://localhost:8001/index.html](http://localhost:8001/index.html)
+[http://djangofan.github.com/html-test-site/site/index.html]
 
-Get up and running with three steps:
+
+Alternatively, you can get it up and running on your own local system with three steps:
 
     1. Download the .zip distribution of this archive. Unzip it anywhere.
     2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 'startWeb' Gradle task if you choose
        to use it but it isn't really necessary.
     3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
+    4. Navigate to http://localhost:8001/index.html
 
 
 GitHub Site URL
 ==================
 http://djangofan.github.com/html-test-site
-
-Project Demo
-==================
-http://djangofan.github.com/html-test-site/site/index.html
 
 
 Originally forked from this project:
