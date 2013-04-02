@@ -17,6 +17,10 @@ GitHub Site URL
 ==================
 http://djangofan.github.com/html-test-site
 
+Project Demo
+==================
+http://djangofan.github.com/html-test-site/site/index.html
+
 
 Originally forked from this project:
 ==================
