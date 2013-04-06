@@ -8,11 +8,13 @@ A static sample HTML site for WebDriver testing.  Hosted on GitHub at this locat
 
 Alternatively, you can get it up and running on your own local system with three steps:
 
-    1. Download the .zip distribution of this archive. Unzip it anywhere.
-    2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 
-       'startWeb' Gradle task if you choose
+    1. Download the .zip distribution of this archive. Unzip 
+       it anywhere.
+    2. Run with Gradle tasks "clean copyToLib compileJava".  
+       There is also a 'startWeb' Gradle task if you choose
        to use it but it isn't really necessary.
-    3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
+    3. Run the included 'startWeb.bat' directly. (startWeb.sh
+       coming soon)
     4. Navigate to http://localhost:8001/index.html
 
 
