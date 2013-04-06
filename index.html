@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Html-test-site : Html test site for Selenium WebDriver examples." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Html-test-site</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/djangofan/html-test-site">View on GitHub</a>
+
+          <h1 id="project_title">Html-test-site</h1>
+          <h2 id="project_tagline">Html test site for Selenium WebDriver examples.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/djangofan/html-test-site/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/djangofan/html-test-site/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>html-test-site</h1>
+
+<p>A static sample HTML site for WebDriver testing.  Hosted on GitHub at this location:</p>
+
+<p><a href="http://djangofan.github.com/html-test-site/site/index.html">http://djangofan.github.com/html-test-site/site/index.html</a></p>
+
+<p>Alternatively, you can get it up and running on your own local system with three steps:</p>
+
+<pre><code>1. Download the .zip distribution of this archive. Unzip it anywhere.
+2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 
+   'startWeb' Gradle task if you choose
+   to use it but it isn't really necessary.
+3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
+4. Navigate to http://localhost:8001/index.html
+</code></pre>
+
+<h1>GitHub Page URL</h1>
+
+<p><a href="http://djangofan.github.com/html-test-site">http://djangofan.github.com/html-test-site</a></p>
+
+<h1>Originally forked from this project:</h1>
+
+<p><a href="https://github.com/pojorisin">https://github.com/pojorisin</a></p>
+
+<h1>Instructions On Forking This Project For Yourself</h1>
+
+<p>Steps to publishing a website on GitHub (each line is a separate step):</p>
+
+<pre><code>Fork my project at GitHub: https://github.com/djangofan/html-test-site
+CD C:\Temp
+git clone https://github.com/djangofan/html-test-site.git
+CD C:\Temp\html-test-site
+git checkout --orphan gh-pages
+git rm -rf .
+Copy updated site files into place, within C:\Temp\html-test-site\site
+git add .
+git commit -a -m "Initial gh-pages commit."
+git pull origin gh-pages
+git push origin gh-pages
+Wait a few minutes and access at: 
+    http://ACCTNAME.github.com/html-test-site/site/index.html
+</code></pre>
+
+<p>NOTE: What you end up with is a master branch and a gh-pages branch in 
+your source control. If you delete the gh-pages branch from GitHub then
+the site pages will disappear a few minutes later.</p>
+
+<p>To update the branch, just delete the old gh-pages branch and do the above
+steps again.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Html-test-site maintained by <a href="https://github.com/djangofan">djangofan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
