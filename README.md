@@ -9,7 +9,8 @@ A static sample HTML site for WebDriver testing.  Hosted on GitHub at this locat
 Alternatively, you can get it up and running on your own local system with three steps:
 
     1. Download the .zip distribution of this archive. Unzip it anywhere.
-    2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 'startWeb' Gradle task if you choose
+    2. Run with Gradle tasks "clean copyToLib compileJava".  There is also a 
+       'startWeb' Gradle task if you choose
        to use it but it isn't really necessary.
     3. Run the included 'startWeb.bat' directly. (startWeb.sh coming soon)
     4. Navigate to http://localhost:8001/index.html
@@ -41,9 +42,12 @@ Steps to publishing a website on GitHub (each line is a separate step):
     git commit -a -m "Initial gh-pages commit."
     git pull origin gh-pages
     git push origin gh-pages
-    Wait a few minutes and access at: http://ACCTNAME.github.com/html-test-site/site/index.html
+    Wait a few minutes and access at: 
+        http://ACCTNAME.github.com/html-test-site/site/index.html
 
-NOTE: What you end up with is a master branch and a gh-pages branch in your source control. If you delete<br/>
-the gh-pages branch from GitHub then the site pages will disappear a few minutes later.
+NOTE: What you end up with is a master branch and a gh-pages branch in 
+your source control. If you delete the gh-pages branch from GitHub then
+the site pages will disappear a few minutes later.
 
-To update the branch, just delete the old gh-pages branch and do the above steps again.
+To update the branch, just delete the old gh-pages branch and do the above
+steps again.
