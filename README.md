@@ -46,16 +46,4 @@ Steps to publishing a website on GitHub (each line is a separate step):
 NOTE: What you end up with is a master branch and a gh-pages branch in your source control. If you delete<br/>
 the gh-pages branch from GitHub then the site pages will disappear a few minutes later.
 
-To update the branch, these are the steps:
-
-    CD C:\Temp\html-test-site
-    git checkout gh-pages
-    Make edits
-    git add .
-    git config --global user.email "you@examplecom"
-    git config --global user.name "Your Name"
-    git commit -a -m "Initial gh-pages commit."
-    git pull origin gh-pages
-    git push origin gh-pages
-    Wait a few minutes and access at: http://ACCTNAME.github.com/html-test-site/site/index.html
-
+To update the branch, just delete the old gh-pages branch and do the above steps again.
