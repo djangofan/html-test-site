@@ -31,13 +31,14 @@ Instructions On Forking This Project For Yourself
 
 Steps to publishing a website on GitHub (each line is a separate step):
 
-    Fork my project at GitHub: https://github.com/djangofan/html-test-site
+    Fork my project from GitHub: 
+        https://github.com/djangofan/html-test-site
     CD C:\Temp
-    git clone https://github.com/djangofan/html-test-site.git
+    git clone https://github.com/user.name/html-test-site.git
     CD C:\Temp\html-test-site
     git checkout --orphan gh-pages
     git rm -rf .
-    Copy updated site files into place, within C:\Temp\html-test-site\site
+    Copy updated site files into place at C:\Temp\html-test-site\site
     git add .
     git commit -a -m "Initial gh-pages commit."
     git pull origin gh-pages
