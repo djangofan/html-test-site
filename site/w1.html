@@ -104,22 +104,14 @@
 	     };
         window.open("w2.html",windowName);
       }
-	  
-	  function loadIFrame2() {
-		window.frames['BodyFrame2'].document.location.href = "iframe2.html";
-      }
-
-      function delayedLoad() {
-        window.setTimeout( loadIFrame2(), 2000 );
-      }
 
 	  
     </script>
-    <title>webdriver unit test page title</title
+    <title>UI Test Automation Selenium WebDriver Page</title
   </head>
-  <body onLoad="delayedLoad();">
+  <body >
     <form id="webDriverUnitTestFormID" name="webDriverUnitTestFormName">
-      <h1>UI Automation Selenium WebDriver Unit Test Page</h1>
+      <h1>UI Test Automation Selenium WebDriver Page</h1>
       <hr />
       <table>
         
@@ -206,6 +198,7 @@
         </tr>
       </table>
       <hr />
+	  <a name="iFrame1">
 	  <table width="800">
         <tr>
           <td>
@@ -222,7 +215,9 @@
           </td>
         </tr>
       </table>
+	  </a>
 	  <hr />
+	  <a name="iFrame2">
 	  <table width="800">
         <tr>
           <td>
@@ -232,14 +227,16 @@
             <table width="450">
               <tr>
                 <td>
-                  <iframe id="BodyFrame2" name="BodyFrame2" src="" frameborder="1" width="700" height="240"></iframe>
+                  <iframe id="BodyFrame2" name="BodyFrame2" src="iframe2.html" frameborder="1" width="700" height="240"></iframe>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
+	  </a>
 	  <hr />
+	  <a name="datePick">
 	  <table width="800">
         <tr>
           <td>
@@ -256,6 +253,7 @@
           </td>
         </tr>
       </table>
+	  </a>
       <hr />
 	  <table width="800">
         <tr>
