@@ -52,6 +52,8 @@ To update the branch, these are the steps:
     git checkout gh-pages
     Make edits
     git add .
+    git config --global user.email "you@examplecom"
+    git config --global user.name "Your Name"
     git commit -a -m "Initial gh-pages commit."
     git pull origin gh-pages
     git push origin gh-pages
